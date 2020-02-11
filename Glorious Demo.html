@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!-- saved from url=(1013)https://glorious.codes/demo?demo=Y29uc3QgZ2RlbW8gPSBuZXcgR0RlbW8oJ1tkYXRhLWRlbW8tY29udGFpbmVyXScpOwoKY29uc3QgY29kZSA9ICBgCmNvbnN0IGNlcCA9IHJlcXVpcmUoJ2NlcC1wcm9taXNlJyk7CgpjZXAoJzAxMzEwLTIwMCcpLnRoZW4oY29uc29sZS5sb2cpOwpgOwoKY29uc3QgaGlnaGxpZ2h0ZWRDb2RlID0gUHJpc20uaGlnaGxpZ2h0KAogIGNvZGUsCiAgUHJpc20ubGFuZ3VhZ2VzLmphdmFzY3JpcHQsCiAgJ2phdmFzY3JpcHQnCik7CgpnZGVtbwogIC5vcGVuQXBwKCdlZGl0b3InLCAlT1BCUiUgbWluSGVpZ2h0OiAnNDAwcHgnLCB3aW5kb3dUaXRsZTogJ2RlbW8uanMnICVDTEJSJSkKICAud3JpdGUoaGlnaGxpZ2h0ZWRDb2RlLCAlT1BCUiUgb25Db21wbGV0ZURlbGF5OiAyMDAwICVDTEJSJSkKICAub3BlbkFwcCgndGVybWluYWwnLCAlT1BCUiUgbWluSGVpZ2h0OiAnNDAwcHgnLCBwcm9tcHRTdHJpbmc6ICckJyAlQ0xCUiUpCiAgLmNvbW1hbmQoJ25vZGUgLi9kZW1vLmpzJywgJU9QQlIlIG9uQ29tcGxldGVEZWxheTogMTAwMCAlQ0xCUiUpCiAgLnJlc3BvbmQoYCVPUEJSJQogICJjZXAiOiAiMDEzMTAyMDAiLAogICJjaXR5IjogIlPjbyBQYXVsbyIsCiAgIm5laWdoYm9yaG9vZCI6ICJCZWxhIFZpc3RhIiwKICAic3RhdGUiOiAiU1AiLAogICJzdHJlZXQiOiAiQXZlbmlkYSBQYXVsaXN0YSwgZGUgMTUxMiBhIDIxMzIgLSBsYWRvIHBhciIKJUNMQlIlYCkKICAuY29tbWFuZCgnJykKICAuZW5kKCk7 -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Glorious Demo</title>
+    <meta content="width=device-width,initial-scale=1,user-scalable=yes" name="viewport">
+    <meta content="no-cache" http-equiv="cache-control">
+    <meta content="max-age=0" http-equiv="cache-control">
+    <meta content="0" http-equiv="expires">
+    <meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires">
+    <meta content="no-cache" http-equiv="pragma">
+    <link href="https://glorious.codes/favicon-glorious-codes.png" rel="shortcut icon">
+    <link href="./Glorious Demo_files/main-fa637fad05b666298645.css" rel="stylesheet">
+    <script type="text/javascript" async="" src="./Glorious Demo_files/analytics.js.download"></script>
+    <script src="./Glorious Demo_files/analytics.js.download" async="" type="text/javascript"></script>
+    <script src="./Glorious Demo_files/js" async=""></script>
+    <style id="codeflask-style">
+        .codeflask {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .codeflask,
+        .codeflask * {
+            box-sizing: border-box;
+        }
+        
+        .codeflask__pre {
+            pointer-events: none;
+            z-index: 3;
+            overflow: hidden;
+        }
+        
+        .codeflask__textarea {
+            background: none;
+            border: none;
+            color: #fff;
+            z-index: 1;
+            resize: none;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            -webkit-appearance: pre;
+            caret-color: #111;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .codeflask--has-line-numbers .codeflask__textarea {
+            width: calc(100% - 40px);
+        }
+        
+        .codeflask__code {
+            display: block;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            overflow: hidden;
+        }
+        
+        .codeflask__flatten {
+            padding: 10px;
+            font-size: 13px;
+            line-height: 20px;
+            white-space: pre;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: auto;
+            margin: 0 !important;
+            outline: none;
+            text-align: left;
+        }
+        
+        .codeflask--has-line-numbers .codeflask__flatten {
+            width: calc(100% - 40px);
+            left: 40px;
+        }
+        
+        .codeflask__line-highlight {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        
+        .codeflask__lines {
+            padding: 10px 4px;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: 'Cousine', monospace;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            text-align: right;
+            color: #999;
+            z-index: 2;
+        }
+        
+        .codeflask__lines__line {
+            display: block;
+        }
+        
+        .codeflask.codeflask--has-line-numbers {
+            padding-left: 40px;
+        }
+        
+        .codeflask.codeflask--has-line-numbers:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            background: #eee;
+            z-index: 1;
+        }
+    </style>
+    <style id="theme-default">
+        .codeflask {
+            background: #fff;
+            color: #4f559c;
+        }
+        
+        .codeflask .token.punctuation {
+            color: #4a4a4a;
+        }
+        
+        .codeflask .token.keyword {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.operator {
+            color: #ff5598;
+        }
+        
+        .codeflask .token.string {
+            color: #41ad8f;
+        }
+        
+        .codeflask .token.comment {
+            color: #9badb7;
+        }
+        
+        .codeflask .token.function {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.boolean {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.number {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.selector {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.property {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.tag {
+            color: #8500ff;
+        }
+        
+        .codeflask .token.attr-value {
+            color: #8500ff;
+        }
+    </style>
+    <meta content="" name="application-name">
+    <meta content="glorious, demo, demonstration, code" name="keywords">
+    <meta content="summary" name="twitter:card">
+    <meta content="Glorious Demo" name="twitter:title">
+    <meta content="The easiest way to show your code in action." name="twitter:description">
+    <meta content="@gloriouscodes" name="twitter:site">
+    <meta content="@rcamargo" name="twitter:creator">
+    <meta content="Glorious Demo" itemprop="name">
+    <meta content="The easiest way to show your code in action." itemprop="desc">
+    <meta content="Glorious Demo" property="og:title">
+    <meta content="https://glorious.codes/images/demo-250x250.png" property="og:image">
+    <script async="true" src="./Glorious Demo_files/js"></script>
+    <meta name="application-name" content="">
+    <meta name="keywords" content="glorious, demo, demonstration, code">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Glorious Demo">
+    <meta name="twitter:description" content="The easiest way to show your code in action.">
+    <meta name="twitter:site" content="@gloriouscodes">
+    <meta name="twitter:creator" content="@rcamargo">
+    <meta itemprop="name" content="Glorious Demo">
+    <meta itemprop="desc" content="The easiest way to show your code in action.">
+    <meta property="og:title" content="Glorious Demo">
+    <meta property="og:image" content="https://glorious.codes/images/demo-250x250.png">
+</head>
+
+<body cz-shortcut-listen="true">
+    <main data-app="">
+        <header class="topbar">
+            <div class="app-container">
+                <div class="row">
+                    <div class="row-item row-item-size-12">
+                        <!---->
+                        <!---->
+                        <div class="app-menu">
+                            <nav class="base-menu">
+                                <ul class="list">
+                                    <li class="list-item"><span class="base-link"><!----> <a href="https://glorious.codes/" class="router-link-active">
+        Codes
+      </a> <!----></span></li>
+                                    <li class="list-item"><span class="base-link"><!----> <a href="https://glorious.codes/author" class="">
+        Author
+      </a> <!----></span></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article class="viewport">
+            <div class="app-container">
+                <div class="row row-vertical-centered">
+                    <div class="row-item row-item-size-5">
+                        <!---->
+                        <!---->
+                        <div class="code-view-summary">
+                            <summary class="view-summary">
+                                <!---->
+                                <h1>Glorious Demo</h1>
+                                <p>
+                                    The easiest way of creating animations to show your code in action.
+                                    <br>
+                                    <div class="code-weight-badge"><span class="badge badge-success"><i class="icon ion-cube"></i> <span class="badge-text">4.6kb Gzipped</span></span>
+                                    </div> <span class="github-button-widget"><span></span></span>
+                                </p>
+                                <div data-code-view-summary-custom-content="" class="code-view-summary-custom-content">
+                                    <a href="https://www.producthunt.com/posts/glorious-demo?utm_source=badge-top-post-badge" target="_blank"><img src="./Glorious Demo_files/top-post-badge.svg" alt="Glorious Demo - Create glorious animations to show your code in action" width="200px" height="50px" style="width: 225px; height: 50px;"></a>
+                                </div>
+                                <ul class="list">
+                                    <li class="list-item"><span class="external-link"><span class="base-link"><i class="icon ion-android-open"></i> <!----> <a href="https://github.com/glorious-codes/glorious-demo#installation" target="_blank">
+          See documentation
+        </a></span></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="codes-back-link">
+                                            <div class="back-link"><span class="base-link"><i class="icon ion-android-arrow-back"></i> <a href="https://glorious.codes/" class="router-link-active">
+    All codes
+  </a> <!----></span></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </summary>
+                        </div>
+                    </div>
+                    <div class="row-item row-item-size-7">
+                        <!---->
+                        <!---->
+                        <div class="demo-demo">
+                            <div class="row">
+                                <div class="row-item row-item-size-12">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div editor-id="FNfesN9XQ" class="editor" style="display: none;">
+                                        <div class="codeflask"><textarea class="codeflask__textarea codeflask__flatten" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></textarea><pre class="codeflask__pre codeflask__flatten  language-js" style="transform: translate3d(0px, -1104px, 0px);"><code class="codeflask__code  language-js"><span class="token keyword">const</span> gdemo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GDemo</span><span class="token punctuation">(</span><span class="token string">'[data-demo-container]'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> code <span class="token operator">=</span>  <span class="token template-string"><span class="token string">`
+// Chama a function no clique em "Validar e-mail"
+        jQuery(".btnValidaEmail").click(function(event) {
+            //Remove a classe is-invalid a cada envio
+            jQuery('.form-control').removeClass('is-invalid');
+            event.preventDefault();
+            validarEmail();
+
+        });
+        // Function que valida e exibe o callback
+        function validarEmail() {
+
+            // Pega o e-mail do input
+            var email = jQuery('#email').val();
+            var a = "f9420b3b-8ff4-4b9b-825a-179073fc486b"
+
+            // Variavel com o objeto da requisição AJAX
+            var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "dataType": "jsonp",
+                    "url": "https://bpi.briteverify.com/emails.json?address=" + email + "&amp;apikey=" + a,
+                    "method": "POST",
+                    "headers": {
+                        "cache-control": "no-cache",
+                        "postman-token": "fd412515-853b-39d9-36f9-07a1f418dab1"
+                    }
+                }
+                // Requisição AJAX
+            jQuery.ajax(settings).done(function(response) {
+                var status = response.status;
+
+                // Se inválido
+                if (status == "invalid") {
+                    // exibe info
+                    jQuery('.form-control').addClass('is-invalid');
+                    jQuery('#email').val("");
+
+                }
+
+                // Se válido
+                if (status == "valid") {
+                    // exibe info
+                    jQuery('.form-control').addClass('is-valid');
+                }
+            });
+        };
+`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> highlightedCode <span class="token operator">=</span> Prism<span class="token punctuation">.</span><span class="token function">highlight</span><span class="token punctuation">(</span>
+  code<span class="token punctuation">,</span>
+  Prism<span class="token punctuation">.</span>languages<span class="token punctuation">.</span>javascript<span class="token punctuation">,</span>
+  <span class="token string">'javascript'</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+gdemo
+  <span class="token punctuation">.</span><span class="token function">openApp</span><span class="token punctuation">(</span><span class="token string">'editor'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> minHeight<span class="token punctuation">:</span> <span class="token string">'400px'</span><span class="token punctuation">,</span> windowTitle<span class="token punctuation">:</span> <span class="token string">'validaEmail.js'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>highlightedCode<span class="token punctuation">,</span> <span class="token punctuation">{</span> onCompleteDelay<span class="token punctuation">:</span> <span class="token number">2000</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">openApp</span><span class="token punctuation">(</span><span class="token string">'terminal'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> minHeight<span class="token punctuation">:</span> <span class="token string">'400px'</span><span class="token punctuation">,</span> promptString<span class="token punctuation">:</span> <span class="token string">'$'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'executar a função validarEmail()'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> onCompleteDelay<span class="token punctuation">:</span> <span class="token number">1000</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">respond</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`{
+  address: "talles.nicacio@gmail.com"
+  account: "talles.nicacio"
+  domain: "gmail.com"
+  status: "valid"
+  connected: null
+  disposable: false
+  role_address: false
+  duration: 0.020614784
+}`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+                                    </div>
+                                    <div data-demo-container="" class="demo-demo-previewer" style="">
+                                        <div class="desktop">
+                                            <div class="editor-application">
+                                                <div class="application" data-application="">
+                                                    <div class="application-topbar">
+                                                        <div class="application-actions-container">
+                                                            <div class="application-action application-action-close"></div>
+                                                            <div class="application-action application-action-minimize"></div>
+                                                            <div class="application-action application-action-maximize"></div>
+                                                        </div>
+                                                        <div class="application-title-container" data-title-container="">validaEmail.js</div>
+                                                    </div>
+                                                    <div class="application-content-container" data-content-container="" style="min-height: 374px;">
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">1</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"><span class="token comment">// Chama a function no clique em "Validar e-mail"</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">2</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">        <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">".btnValidaEmail"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">3</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token comment">//Remove a classe is-invalid a cada envio</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">4</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">'.form-control'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">'is-invalid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">5</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">6</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token function">validarEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">7</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">8</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">9</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">        <span class="token comment">// Function que valida e exibe o callback</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">10</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">        <span class="token keyword">function</span> <span class="token function">validarEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">11</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">12</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token comment">// Pega o e-mail do input</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">13</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token keyword">var</span> email <span class="token operator">=</span> <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">'#email'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">14</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">"f9420b3b-8ff4-4b9b-825a-179073fc486b"</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">15</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">16</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token comment">// Variavel com o objeto da requisição AJAX</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">17</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token keyword">var</span> settings <span class="token operator">=</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">18</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token string">"async"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">19</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token string">"crossDomain"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">20</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token string">"dataType"</span><span class="token punctuation">:</span> <span class="token string">"jsonp"</span><span class="token punctuation">,</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">21</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token string">"url"</span><span class="token punctuation">:</span> <span class="token string">"https://bpi.briteverify.com/emails.json?address="</span> <span class="token operator">+</span> email <span class="token operator">+</span> <span class="token string">"&amp;apikey="</span> <span class="token operator">+</span> a<span class="token punctuation">,</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">22</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token string">"method"</span><span class="token punctuation">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">23</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token string">"headers"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">24</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                        <span class="token string">"cache-control"</span><span class="token punctuation">:</span> <span class="token string">"no-cache"</span><span class="token punctuation">,</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">25</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                        <span class="token string">"postman-token"</span><span class="token punctuation">:</span> <span class="token string">"fd412515-853b-39d9-36f9-07a1f418dab1"</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">26</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token punctuation">}</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">27</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token punctuation">}</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">28</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token comment">// Requisição AJAX</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">29</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            jQuery<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span>settings<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">30</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token keyword">var</span> status <span class="token operator">=</span> response<span class="token punctuation">.</span>status<span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">31</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">32</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token comment">// Se inválido</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">33</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token keyword">if</span> <span class="token punctuation">(</span>status <span class="token operator">==</span> <span class="token string">"invalid"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">34</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token comment">// exibe info</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">35</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">'.form-control'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'is-invalid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">36</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">'#email'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">37</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">38</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token punctuation">}</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">39</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor"></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">40</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token comment">// Se válido</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">41</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token keyword">if</span> <span class="token punctuation">(</span>status <span class="token operator">==</span> <span class="token string">"valid"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">42</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token comment">// exibe info</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">43</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                    <span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">'.form-control'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'is-valid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">44</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">                <span class="token punctuation">}</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">45</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">46</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor">        <span class="token punctuation">}</span><span class="token punctuation">;</span></span></pre>
+                                                        </div>
+                                                        <div class="editor-line">
+                                                            <div class="editor-line-number" data-editor-line-number="">47</div>
+                                                            <pre class="editor-line-text" data-editor-line-text=""><span class="cursor cursor-active"></span></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="terminal-application">
+                                                <div class="application application-maximized" data-application="">
+                                                    <div class="application-topbar">
+                                                        <div class="application-actions-container">
+                                                            <div class="application-action application-action-close"></div>
+                                                            <div class="application-action application-action-minimize"></div>
+                                                            <div class="application-action application-action-maximize"></div>
+                                                        </div>
+                                                        <div class="application-title-container" data-title-container="">bash</div>
+                                                    </div>
+                                                    <div class="application-content-container" data-content-container="" style="min-height: 374px;">
+                                                        <div class="terminal-line">
+                                                            <div>
+                                                                <div class="terminal-command-line-prompt-string" data-terminal-command-line-prompt-string="">
+                                                                    $</div>
+                                                                <div class="terminal-command-line-text" data-terminal-command-line-text="">
+                                                                    <span class="cursor">executar a função validarEmail()</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text="">{</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> address: "talles.nicacio@gmail.com"</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> account: "talles.nicacio"</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> domain: "gmail.com"</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> status: "valid"</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> connected: null</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> disposable: false</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> role_address: false</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text=""> duration: 0.020614784</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div class="terminal-response-line-text terminal-response-line-plain-text" data-terminal-response-line-text="">}</div>
+                                                        </div>
+                                                        <div class="terminal-line">
+                                                            <div>
+                                                                <div class="terminal-command-line-prompt-string" data-terminal-command-line-prompt-string="">
+                                                                    $</div>
+                                                                <div class="terminal-command-line-text" data-terminal-command-line-text="">
+                                                                    <span class="cursor cursor-active"></span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-item row-item-size-12">
+                                    <!---->
+                                    <!---->
+                                    <div class="code-demo-toolbar">
+                                        <div class="code-demo-toolbar-left"><span class="toggle-btn-group"><span class="btn-group"><button class="btn btn-small"><i class="icon ion-edit"></i> <span class="btn-text">
+            Edit
+          </span></button> <button class="btn btn-small toggle-btn-pressed"><i class="icon ion-film-marker"></i> <span class="btn-text">
+            Preview
+          </span></button></span>
+                                            </span>
+                                        </div>
+                                        <div class="code-demo-toolbar-right"><span class="btn-group"><span class="copy-btn"><button class="btn btn-small" data-clipboard-text="https://glorious.codes/demo?demo=Y29uc3QgZ2RlbW8gPSBuZXcgR0RlbW8oJ1tkYXRhLWRlbW8tY29udGFpbmVyXScpOwoKY29uc3QgY29kZSA9ICBgCi8vIENoYW1hIGEgZnVuY3Rpb24gbm8gY2xpcXVlIGVtICJWYWxpZGFyIGUtbWFpbCIKICAgICAgICBqUXVlcnkoIi5idG5WYWxpZGFFbWFpbCIpLmNsaWNrKGZ1bmN0aW9uKGV2ZW50KSAlT1BCUiUKICAgICAgICAgICAgLy9SZW1vdmUgYSBjbGFzc2UgaXMtaW52YWxpZCBhIGNhZGEgZW52aW8KICAgICAgICAgICAgalF1ZXJ5KCcuZm9ybS1jb250cm9sJykucmVtb3ZlQ2xhc3MoJ2lzLWludmFsaWQnKTsKICAgICAgICAgICAgZXZlbnQucHJldmVudERlZmF1bHQoKTsKICAgICAgICAgICAgdmFsaWRhckVtYWlsKCk7CgogICAgICAgICVDTEJSJSk7CiAgICAgICAgLy8gRnVuY3Rpb24gcXVlIHZhbGlkYSBlIGV4aWJlIG8gY2FsbGJhY2sKICAgICAgICBmdW5jdGlvbiB2YWxpZGFyRW1haWwoKSAlT1BCUiUKCiAgICAgICAgICAgIC8vIFBlZ2EgbyBlLW1haWwgZG8gaW5wdXQKICAgICAgICAgICAgdmFyIGVtYWlsID0galF1ZXJ5KCcjZW1haWwnKS52YWwoKTsKICAgICAgICAgICAgdmFyIGEgPSAiZjk0MjBiM2ItOGZmNC00YjliLTgyNWEtMTc5MDczZmM0ODZiIgoKICAgICAgICAgICAgLy8gVmFyaWF2ZWwgY29tIG8gb2JqZXRvIGRhIHJlcXVpc2nn428gQUpBWAogICAgICAgICAgICB2YXIgc2V0dGluZ3MgPSAlT1BCUiUKICAgICAgICAgICAgICAgICAgICAiYXN5bmMiOiB0cnVlLAogICAgICAgICAgICAgICAgICAgICJjcm9zc0RvbWFpbiI6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgImRhdGFUeXBlIjogImpzb25wIiwKICAgICAgICAgICAgICAgICAgICAidXJsIjogImh0dHBzOi8vYnBpLmJyaXRldmVyaWZ5LmNvbS9lbWFpbHMuanNvbj9hZGRyZXNzPSIgKyBlbWFpbCArICImYXBpa2V5PSIgKyBhLAogICAgICAgICAgICAgICAgICAgICJtZXRob2QiOiAiUE9TVCIsCiAgICAgICAgICAgICAgICAgICAgImhlYWRlcnMiOiAlT1BCUiUKICAgICAgICAgICAgICAgICAgICAgICAgImNhY2hlLWNvbnRyb2wiOiAibm8tY2FjaGUiLAogICAgICAgICAgICAgICAgICAgICAgICAicG9zdG1hbi10b2tlbiI6ICJmZDQxMjUxNS04NTNiLTM5ZDktMzZmOS0wN2ExZjQxOGRhYjEiCiAgICAgICAgICAgICAgICAgICAgJUNMQlIlCiAgICAgICAgICAgICAgICAlQ0xCUiUKICAgICAgICAgICAgICAgIC8vIFJlcXVpc2nn428gQUpBWAogICAgICAgICAgICBqUXVlcnkuYWpheChzZXR0aW5ncykuZG9uZShmdW5jdGlvbihyZXNwb25zZSkgJU9QQlIlCiAgICAgICAgICAgICAgICB2YXIgc3RhdHVzID0gcmVzcG9uc2Uuc3RhdHVzOwoKICAgICAgICAgICAgICAgIC8vIFNlIGluduFsaWRvCiAgICAgICAgICAgICAgICBpZiAoc3RhdHVzID09ICJpbnZhbGlkIikgJU9QQlIlCiAgICAgICAgICAgICAgICAgICAgLy8gZXhpYmUgaW5mbwogICAgICAgICAgICAgICAgICAgIGpRdWVyeSgnLmZvcm0tY29udHJvbCcpLmFkZENsYXNzKCdpcy1pbnZhbGlkJyk7CiAgICAgICAgICAgICAgICAgICAgalF1ZXJ5KCcjZW1haWwnKS52YWwoIiIpOwoKICAgICAgICAgICAgICAgICVDTEJSJQoKICAgICAgICAgICAgICAgIC8vIFNlIHbhbGlkbwogICAgICAgICAgICAgICAgaWYgKHN0YXR1cyA9PSAidmFsaWQiKSAlT1BCUiUKICAgICAgICAgICAgICAgICAgICAvLyBleGliZSBpbmZvCiAgICAgICAgICAgICAgICAgICAgalF1ZXJ5KCcuZm9ybS1jb250cm9sJykuYWRkQ2xhc3MoJ2lzLXZhbGlkJyk7CiAgICAgICAgICAgICAgICAlQ0xCUiUKICAgICAgICAgICAgJUNMQlIlKTsKICAgICAgICAlQ0xCUiU7CmA7Cgpjb25zdCBoaWdobGlnaHRlZENvZGUgPSBQcmlzbS5oaWdobGlnaHQoCiAgY29kZSwKICBQcmlzbS5sYW5ndWFnZXMuamF2YXNjcmlwdCwKICAnamF2YXNjcmlwdCcKKTsKCmdkZW1vCiAgLm9wZW5BcHAoJ2VkaXRvcicsICVPUEJSJSBtaW5IZWlnaHQ6ICc0MDBweCcsIHdpbmRvd1RpdGxlOiAndmFsaWRhRW1haWwuanMnICVDTEJSJSkKICAud3JpdGUoaGlnaGxpZ2h0ZWRDb2RlLCAlT1BCUiUgb25Db21wbGV0ZURlbGF5OiAyMDAwICVDTEJSJSkKICAub3BlbkFwcCgndGVybWluYWwnLCAlT1BCUiUgbWluSGVpZ2h0OiAnNDAwcHgnLCBwcm9tcHRTdHJpbmc6ICckJyAlQ0xCUiUpCiAgLmNvbW1hbmQoJ2V4ZWN1dGFyIGEgZnVu5+NvIHZhbGlkYXJFbWFpbCgpJywgJU9QQlIlIG9uQ29tcGxldGVEZWxheTogMTAwMCAlQ0xCUiUpCiAgLnJlc3BvbmQoYCVPUEJSJQogIGFkZHJlc3M6ICJ0YWxsZXMubmljYWNpb0BnbWFpbC5jb20iCiAgYWNjb3VudDogInRhbGxlcy5uaWNhY2lvIgogIGRvbWFpbjogImdtYWlsLmNvbSIKICBzdGF0dXM6ICJ2YWxpZCIKICBjb25uZWN0ZWQ6IG51bGwKICBkaXNwb3NhYmxlOiBmYWxzZQogIHJvbGVfYWRkcmVzczogZmFsc2UKICBkdXJhdGlvbjogMC4wMjA2MTQ3ODQKJUNMQlIlYCkKICAuY29tbWFuZCgnJykKICAuZW5kKCk7"><!----> <span class="btn-text"><!----> <span class="copy-btn-content"><i class="icon ion-link"></i> <span class="copy-btn-text">
+            Copy Demo Link
+          </span></span>
+                                            </span>
+                                            </button>
+                                            </span> <span class="tweet-btn"><button class="btn btn-small"><i class="icon ion-social-twitter"></i> <span class="btn-text">
+    Tweet
+  </span></button>
+                                            </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="./Glorious Demo_files/main-fa637fad05b666298645.js.download" type="text/javascript"></script>
+    <script async="true" defer="" src="./Glorious Demo_files/buttons.js.download" data-github-script-tag=""></script>
+    <script src="./Glorious Demo_files/buttons.js.download" async="" defer="" data-github-script-tag=""></script>
+    <script data-demo-code="">
+        (function(GDemo, Prism, compilationErrorHandler, Object, Function, Array, Number, parseFloat, parseInt, Infinity, NaN, undefined, Boolean, String, Symbol, Date, Promise, RegExp, Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError, JSON, Math, console, Intl, ArrayBuffer, Uint8Array, Int8Array, Uint16Array, Int16Array, Uint32Array, Int32Array, Float32Array, Float64Array, Uint8ClampedArray, DataView, Map, Set, WeakMap, WeakSet, Proxy, Reflect, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, unescape, isFinite, isNaN, ByteLengthQueuingStrategy, CountQueuingStrategy, ReadableStream, WritableStream, webkitRTCPeerConnection, webkitMediaStream, WebSocket, WebGLVertexArrayObject, WebGLUniformLocation, WebGLTransformFeedback, WebGLTexture, WebGLSync, WebGLShaderPrecisionFormat, WebGLShader, WebGLSampler, WebGLRenderbuffer, WebGLQuery, WebGLProgram, WebGLFramebuffer, WebGLContextEvent, WebGLBuffer, WebGLActiveInfo, WaveShaperNode, TextEncoder, TextDecoder, SyncManager, SubtleCrypto, StorageEvent, Storage, StereoPannerNode, SourceBufferList, SourceBuffer, ServiceWorkerRegistration, ServiceWorkerContainer, ServiceWorker, ScriptProcessorNode, ScreenOrientation, RTCTrackEvent, RTCStatsReport, RTCSessionDescription, RTCRtpSender, RTCRtpReceiver, RTCRtpContributingSource, RTCPeerConnectionIceEvent, RTCPeerConnection, RTCIceCandidate, RTCDataChannelEvent, RTCDataChannel, RTCDTMFToneChangeEvent, RTCDTMFSender, RTCCertificate, Plugin, PluginArray, PhotoCapabilities, PeriodicWave, PannerNode, OverconstrainedError, OscillatorNode, OfflineAudioContext, OfflineAudioCompletionEvent, NetworkInformation, MimeType, MimeTypeArray, MediaStreamTrackEvent, MediaStreamTrack, MediaStreamEvent, MediaStream, MediaStreamAudioSourceNode, MediaStreamAudioDestinationNode, MediaSource, MediaSettingsRange, MediaRecorder, MediaKeySystemAccess, MediaKeyStatusMap, MediaKeySession, MediaKeyMessageEvent, MediaEncryptedEvent, MediaElementAudioSourceNode, MediaDevices, MediaDeviceInfo, MIDIPort, MIDIOutputMap, MIDIOutput, MIDIMessageEvent, MIDIInputMap, MIDIInput, MIDIConnectionEvent, MIDIAccess, InputDeviceInfo, ImageCapture, ImageBitmapRenderingContext, IIRFilterNode, IDBVersionChangeEvent, IDBTransaction, IDBRequest, IDBOpenDBRequest, IDBObjectStore, IDBKeyRange, IDBIndex, IDBFactory, IDBDatabase, IDBCursorWithValue, IDBCursor, GamepadEvent, Gamepad, GamepadButton, GainNode, EventSource, DynamicsCompressorNode, DeviceOrientationEvent, DeviceMotionEvent, DelayNode, DOMError, CryptoKey, Crypto, ConvolverNode, ConstantSourceNode, CloseEvent, ChannelSplitterNode, ChannelMergerNode, CanvasRenderingContext2D, CanvasCaptureMediaStreamTrack, BroadcastChannel, BlobEvent, BiquadFilterNode, BeforeInstallPromptEvent, BatteryManager, BaseAudioContext, AudioWorkletNode, AudioScheduledSourceNode, AudioProcessingEvent, AudioParamMap, AudioParam, AudioNode, AudioListener, AudioDestinationNode, AudioContext, AudioBufferSourceNode, AudioBuffer, AnalyserNode, postMessage, blur, focus, close, XPathResult, XPathExpression, XPathEvaluator, XMLSerializer, XMLHttpRequestUpload, XMLHttpRequestEventTarget, XMLHttpRequest, XMLDocument, Worker, Window, WheelEvent, ValidityState, VTTCue, URLSearchParams, URL, UIEvent, TreeWalker, TransitionEvent, TrackEvent, TouchList, TouchEvent, Touch, TimeRanges, TextTrackList, TextTrackCueList, TextTrackCue, TextTrack, TextMetrics, TextEvent, Text, TaskAttributionTiming, StyleSheetList, StyleSheet, StaticRange, ShadowRoot, Selection, SecurityPolicyViolationEvent, Screen, SVGViewElement, SVGUseElement, SVGUnitTypes, SVGTransformList, SVGTransform, SVGTitleElement, SVGTextPositioningElement, SVGTextPathElement, SVGTextElement, SVGTextContentElement, SVGTSpanElement, SVGSymbolElement, SVGSwitchElement, SVGStyleElement, SVGStringList, SVGStopElement, SVGSetElement, SVGScriptElement, SVGSVGElement, SVGRectElement, SVGRect, SVGRadialGradientElement, SVGPreserveAspectRatio, SVGPolylineElement, SVGPolygonElement, SVGPointList, SVGPoint, SVGPatternElement, SVGPathElement, SVGNumberList, SVGNumber, SVGMetadataElement, SVGMatrix, SVGMaskElement, SVGMarkerElement, SVGLinearGradientElement, SVGLineElement, SVGLengthList, SVGLength, SVGImageElement, SVGGraphicsElement, SVGGradientElement, SVGGeometryElement, SVGGElement, SVGForeignObjectElement, SVGFilterElement, SVGFETurbulenceElement, SVGFETileElement, SVGFESpotLightElement, SVGFESpecularLightingElement, SVGFEPointLightElement, SVGFEOffsetElement, SVGFEMorphologyElement, SVGFEMergeNodeElement, SVGFEMergeElement, SVGFEImageElement, SVGFEGaussianBlurElement, SVGFEFuncRElement, SVGFEFuncGElement, SVGFEFuncBElement, SVGFEFuncAElement, SVGFEFloodElement, SVGFEDropShadowElement, SVGFEDistantLightElement, SVGFEDisplacementMapElement, SVGFEDiffuseLightingElement, SVGFEConvolveMatrixElement, SVGFECompositeElement, SVGFEComponentTransferElement, SVGFEColorMatrixElement, SVGFEBlendElement, SVGEllipseElement, SVGElement, SVGDescElement, SVGDefsElement, SVGComponentTransferFunctionElement, SVGClipPathElement, SVGCircleElement, SVGAnimatedTransformList, SVGAnimatedString, SVGAnimatedRect, SVGAnimatedPreserveAspectRatio, SVGAnimatedNumberList, SVGAnimatedNumber, SVGAnimatedLengthList, SVGAnimatedLength, SVGAnimatedInteger, SVGAnimatedEnumeration, SVGAnimatedBoolean, SVGAnimatedAngle, SVGAnimateTransformElement, SVGAnimateMotionElement, SVGAnimateElement, SVGAngle, SVGAElement, Response, Request, Range, RadioNodeList, PromiseRejectionEvent, ProgressEvent, ProcessingInstruction, PopStateEvent, PointerEvent, PerformanceTiming, PerformanceResourceTiming, PerformanceObserverEntryList, PerformanceObserver, PerformanceNavigation, PerformanceMeasure, PerformanceMark, PerformanceLongTaskTiming, PerformanceEntry, Performance, PageTransitionEvent, NodeList, NodeIterator, NodeFilter, Node, Navigator, NamedNodeMap, MutationRecord, MutationObserver, MutationEvent, MouseEvent, MessagePort, MessageEvent, MessageChannel, MediaQueryListEvent, MediaQueryList, MediaList, MediaError, Location, KeyboardEvent, IntersectionObserverEntry, IntersectionObserver, InputEvent, InputDeviceCapabilities, ImageData, ImageBitmap, IdleDeadline, History, Headers, HashChangeEvent, HTMLVideoElement, HTMLUnknownElement, HTMLUListElement, HTMLTrackElement, HTMLTitleElement, HTMLTimeElement, HTMLTextAreaElement, HTMLTemplateElement, HTMLTableSectionElement, HTMLTableRowElement, HTMLTableElement, HTMLTableColElement, HTMLTableCellElement, HTMLTableCaptionElement, HTMLStyleElement, HTMLSpanElement, HTMLSourceElement, HTMLSlotElement, HTMLShadowElement, HTMLSelectElement, HTMLScriptElement, HTMLQuoteElement, HTMLProgressElement, HTMLPreElement, HTMLPictureElement, HTMLParamElement, HTMLParagraphElement, HTMLOutputElement, HTMLOptionsCollection, Option, HTMLOptionElement, HTMLOptGroupElement, HTMLObjectElement, HTMLOListElement, HTMLModElement, HTMLMeterElement, HTMLMetaElement, HTMLMenuElement, HTMLMediaElement, HTMLMarqueeElement, HTMLMapElement, HTMLLinkElement, HTMLLegendElement, HTMLLabelElement, HTMLLIElement, HTMLInputElement, Image, HTMLImageElement, HTMLIFrameElement, HTMLHtmlElement, HTMLHeadingElement, HTMLHeadElement, HTMLHRElement, HTMLFrameSetElement, HTMLFrameElement, HTMLFormElement, HTMLFormControlsCollection, HTMLFontElement, HTMLFieldSetElement, HTMLEmbedElement, HTMLElement, HTMLDocument, HTMLDivElement, HTMLDirectoryElement, HTMLDialogElement, HTMLDetailsElement, HTMLDataListElement, HTMLDataElement, HTMLDListElement, HTMLContentElement, HTMLCollection, HTMLCanvasElement, HTMLButtonElement, HTMLBodyElement, HTMLBaseElement, HTMLBRElement, Audio, HTMLAudioElement, HTMLAreaElement, HTMLAnchorElement, HTMLAllCollection, FormData, FontFaceSetLoadEvent, FocusEvent, FileReader, FileList, File, EventTarget, Event, ErrorEvent, Element, DragEvent, DocumentType, DocumentFragment, Document, DataTransferItemList, DataTransferItem, DataTransfer, DOMTokenList, DOMStringMap, DOMStringList, DOMParser, DOMImplementation, DOMException, CustomEvent, CustomElementRegistry, CompositionEvent, Comment, ClipboardEvent, CharacterData, CSSSupportsRule, CSSStyleSheet, CSSStyleRule, CSSStyleDeclaration, CSSRuleList, CSSRule, CSSPageRule, CSSNamespaceRule, CSSMediaRule, CSSKeyframesRule, CSSKeyframeRule, CSSImportRule, CSSGroupingRule, CSSFontFaceRule, CSS, CSSConditionRule, CDATASection, Blob, BeforeUnloadEvent, BarProp, Attr, ApplicationCacheErrorEvent, ApplicationCache, AnimationEvent, AbortSignal, AbortController, WebKitCSSMatrix, frames, self, window, WebKitMutationObserver, webkitURL, WebKitAnimationEvent, WebKitTransitionEvent, parent, opener, top, length, closed, location, document, origin, name, history, locationbar, menubar, personalbar, scrollbars, statusbar, toolbar, status, frameElement, navigator, applicationCache, customElements, external, screen, innerWidth, innerHeight, scrollX, pageXOffset, scrollY, pageYOffset, screenX, screenY, outerWidth, outerHeight, devicePixelRatio, clientInformation, event, offscreenBuffering, screenLeft, screenTop, defaultStatus, defaultstatus, styleMedia, onanimationend, onanimationiteration, onanimationstart, onsearch, ontransitionend, onwebkitanimationend, onwebkitanimationiteration, onwebkitanimationstart, onwebkittransitionend, isSecureContext, onabort, onblur, oncancel, oncanplay, oncanplaythrough, onchange, onclick, onclose, oncontextmenu, oncuechange, ondblclick, ondrag, ondragend, ondragenter, ondragleave, ondragover, ondragstart, ondrop, ondurationchange, onemptied, onended, onerror, onfocus, oninput, oninvalid, onkeydown, onkeypress, onkeyup, onload, onloadeddata, onloadedmetadata, onloadstart, onmousedown, onmouseenter, onmouseleave, onmousemove, onmouseout, onmouseover, onmouseup, onmousewheel, onpause, onplay, onplaying, onprogress, onratechange, onreset, onresize, onscroll, onseeked, onseeking, onselect, onstalled, onsubmit, onsuspend, ontimeupdate, ontoggle, onvolumechange, onwaiting, onwheel, onauxclick, ongotpointercapture, onlostpointercapture, onpointerdown, onpointermove, onpointerup, onpointercancel, onpointerover, onpointerout, onpointerenter, onpointerleave, onafterprint, onbeforeprint, onbeforeunload, onhashchange, onlanguagechange, onmessage, onmessageerror, onoffline, ononline, onpagehide, onpageshow, onpopstate, onrejectionhandled, onstorage, onunhandledrejection, onunload, performance, stop, open, alert, confirm, prompt, print, requestAnimationFrame, cancelAnimationFrame, requestIdleCallback, cancelIdleCallback, captureEvents, releaseEvents, getComputedStyle, matchMedia, moveTo, moveBy, resizeTo, resizeBy, getSelection, find, webkitRequestAnimationFrame, webkitCancelAnimationFrame, fetch, btoa, atob, setTimeout, clearTimeout, setInterval, clearInterval, createImageBitmap, scroll, scrollTo, scrollBy, onappinstalled, onbeforeinstallprompt, crypto, ondevicemotion, ondeviceorientation, ondeviceorientationabsolute, indexedDB, webkitStorageInfo, sessionStorage, localStorage, chrome, WebAssembly, MediaCapabilities, MediaCapabilitiesInfo, CSSImageValue, CSSKeywordValue, CSSMathInvert, CSSMathMax, CSSMathMin, CSSMathNegate, CSSMathProduct, CSSMathSum, CSSMathValue, CSSMatrixComponent, CSSNumericArray, CSSNumericValue, CSSPerspective, CSSPositionValue, CSSRotate, CSSScale, CSSSkew, CSSSkewX, CSSSkewY, CSSStyleValue, CSSTransformComponent, CSSTransformValue, CSSTranslate, CSSUnitValue, CSSUnparsedValue, CSSVariableReferenceValue, StylePropertyMap, StylePropertyMapReadOnly, DOMMatrix, DOMMatrixReadOnly, DOMPoint, DOMPointReadOnly, DOMQuad, DOMRect, DOMRectReadOnly, PerformanceNavigationTiming, PerformancePaintTiming, ResizeObserver, ResizeObserverEntry, SVGAnimationElement, SVGDiscardElement, SVGMPathElement, PerformanceServerTiming, SharedWorker, FontFace, VisualViewport, XSLTProcessor, visualViewport, BudgetService, Notification, PaymentInstruments, PaymentManager, PaymentAddress, PaymentRequest, PaymentRequestUpdateEvent, PaymentResponse, Permissions, PermissionStatus, Presentation, PresentationAvailability, PresentationConnection, PresentationConnectionAvailableEvent, PresentationConnectionCloseEvent, PresentationConnectionList, PresentationReceiver, PresentationRequest, PushManager, PushSubscription, PushSubscriptionOptions, RemotePlayback, SpeechSynthesisEvent, SpeechSynthesisUtterance, webkitSpeechGrammar, webkitSpeechGrammarList, webkitSpeechRecognition, webkitSpeechRecognitionError, webkitSpeechRecognitionEvent, CanvasGradient, CanvasPattern, Path2D, WebGL2RenderingContext, WebGLRenderingContext, USB, USBAlternateInterface, USBConfiguration, USBConnectionEvent, USBDevice, USBEndpoint, USBInterface, USBInTransferResult, USBIsochronousInTransferPacket, USBIsochronousInTransferResult, USBIsochronousOutTransferPacket, USBIsochronousOutTransferResult, USBOutTransferResult, speechSynthesis, webkitRequestFileSystem, webkitResolveLocalFileSystemURL, openDatabase, Worklet, caches, AudioWorklet, Cache, CacheStorage, Clipboard, Credential, CredentialsContainer, FederatedCredential, MediaKeys, NavigationPreloadManager, PasswordCredential, StorageManager, __PRERENDER_STATUS, setImmediate, clearImmediate, dataLayer) {
+            'use strict';
+            try {
+                const gdemo = new GDemo('[data-demo-container]');
+
+                const code = 'console.log("Hello World!");'
+
+                const highlightedCode = Prism.highlight(
+                    code,
+                    Prism.languages.javascript,
+                    'javascript'
+                );
+
+                gdemo
+                    .openApp('editor', {
+                        minHeight: '400px',
+                        windowTitle: 'demo.js'
+                    })
+                    .write(highlightedCode, {
+                        onCompleteDelay: 2000
+                    })
+                    .openApp('terminal', {
+                        minHeight: '400px',
+                        promptString: '$'
+                    })
+                    .command('node ./demo')
+                    .respond('Hello World!')
+                    .command('')
+                    .end();
+
+            } catch (err) {
+                compilationErrorHandler && compilationErrorHandler(err);
+            }
+        }(window.GDemo, window.Prism, window.compilationErrorHandler));
+    </script>
+    <script data-demo-code="">
+        (function(GDemo, Prism, compilationErrorHandler, Object, Function, Array, Number, parseFloat, parseInt, Infinity, NaN, undefined, Boolean, String, Symbol, Date, Promise, RegExp, Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError, globalThis, JSON, Math, console, Intl, ArrayBuffer, Uint8Array, Int8Array, Uint16Array, Int16Array, Uint32Array, Int32Array, Float32Array, Float64Array, Uint8ClampedArray, BigUint64Array, BigInt64Array, DataView, Map, BigInt, Set, WeakMap, WeakSet, Proxy, Reflect, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, unescape, isFinite, isNaN, webkitRTCPeerConnection, webkitMediaStream, WebSocket, WebGLVertexArrayObject, WebGLUniformLocation, WebGLTransformFeedback, WebGLTexture, WebGLSync, WebGLShaderPrecisionFormat, WebGLShader, WebGLSampler, WebGLRenderingContext, WebGLRenderbuffer, WebGLQuery, WebGLProgram, WebGLFramebuffer, WebGLContextEvent, WebGLBuffer, WebGLActiveInfo, WebGL2RenderingContext, WaveShaperNode, TextEncoderStream, TextEncoder, TextDecoderStream, TextDecoder, SyncManager, SubtleCrypto, StorageEvent, Storage, StereoPannerNode, SourceBufferList, SourceBuffer, ScriptProcessorNode, ScreenOrientation, RTCTrackEvent, RTCStatsReport, RTCSessionDescription, RTCRtpTransceiver, RTCRtpSender, RTCRtpReceiver, RTCPeerConnectionIceEvent, RTCPeerConnectionIceErrorEvent, RTCPeerConnection, RTCIceCandidate, RTCErrorEvent, RTCError, RTCDataChannelEvent, RTCDataChannel, RTCDTMFToneChangeEvent, RTCDTMFSender, RTCCertificate, Plugin, PluginArray, PhotoCapabilities, PeriodicWave, Path2D, PannerNode, OverconstrainedError, OscillatorNode, OfflineAudioContext, OfflineAudioCompletionEvent, NetworkInformation, MimeType, MimeTypeArray, MediaStreamTrackEvent, MediaStreamTrack, MediaStreamEvent, MediaStream, MediaStreamAudioSourceNode, MediaStreamAudioDestinationNode, MediaSettingsRange, MediaRecorder, MediaEncryptedEvent, MediaElementAudioSourceNode, MediaCapabilities, InputDeviceInfo, ImageCapture, ImageBitmapRenderingContext, IIRFilterNode, IDBVersionChangeEvent, IDBTransaction, IDBRequest, IDBOpenDBRequest, IDBObjectStore, IDBKeyRange, IDBIndex, IDBFactory, IDBDatabase, IDBCursorWithValue, IDBCursor, GeolocationPositionError, GeolocationPosition, GeolocationCoordinates, Geolocation, GamepadHapticActuator, GamepadEvent, Gamepad, GamepadButton, GainNode, EventSource, DynamicsCompressorNode, DelayNode, DOMError, CryptoKey, Crypto, ConvolverNode, ConstantSourceNode, CloseEvent, ChannelSplitterNode, ChannelMergerNode, CanvasRenderingContext2D, CanvasPattern, CanvasGradient, CanvasCaptureMediaStreamTrack, BroadcastChannel, BlobEvent, BiquadFilterNode, BeforeInstallPromptEvent, BatteryManager, BaseAudioContext, AudioWorkletNode, AudioScheduledSourceNode, AudioProcessingEvent, AudioParamMap, AudioParam, AudioNode, AudioListener, AudioDestinationNode, AudioContext, AudioBufferSourceNode, AudioBuffer, AnalyserNode, XPathResult, XPathExpression, XPathEvaluator, XMLSerializer, XMLHttpRequestUpload, XMLHttpRequestEventTarget, XMLHttpRequest, XMLDocument, WritableStreamDefaultWriter, WritableStream, Worker, Window, WheelEvent, VisualViewport, ValidityState, VTTCue, URLSearchParams, URL, UIEvent, TreeWalker, TransitionEvent, TransformStream, TrackEvent, TouchList, TouchEvent, Touch, TimeRanges, TextTrackList, TextTrackCueList, TextTrackCue, TextTrack, TextMetrics, TextEvent, Text, TaskAttributionTiming, StyleSheetList, StyleSheet, StylePropertyMapReadOnly, StylePropertyMap, StaticRange, ShadowRoot, Selection, SecurityPolicyViolationEvent, Screen, SVGViewElement, SVGUseElement, SVGUnitTypes, SVGTransformList, SVGTransform, SVGTitleElement, SVGTextPositioningElement, SVGTextPathElement, SVGTextElement, SVGTextContentElement, SVGTSpanElement, SVGSymbolElement, SVGSwitchElement, SVGStyleElement, SVGStringList, SVGStopElement, SVGSetElement, SVGScriptElement, SVGSVGElement, SVGRectElement, SVGRect, SVGRadialGradientElement, SVGPreserveAspectRatio, SVGPolylineElement, SVGPolygonElement, SVGPointList, SVGPoint, SVGPatternElement, SVGPathElement, SVGNumberList, SVGNumber, SVGMetadataElement, SVGMatrix, SVGMaskElement, SVGMarkerElement, SVGMPathElement, SVGLinearGradientElement, SVGLineElement, SVGLengthList, SVGLength, SVGImageElement, SVGGraphicsElement, SVGGradientElement, SVGGeometryElement, SVGGElement, SVGForeignObjectElement, SVGFilterElement, SVGFETurbulenceElement, SVGFETileElement, SVGFESpotLightElement, SVGFESpecularLightingElement, SVGFEPointLightElement, SVGFEOffsetElement, SVGFEMorphologyElement, SVGFEMergeNodeElement, SVGFEMergeElement, SVGFEImageElement, SVGFEGaussianBlurElement, SVGFEFuncRElement, SVGFEFuncGElement, SVGFEFuncBElement, SVGFEFuncAElement, SVGFEFloodElement, SVGFEDropShadowElement, SVGFEDistantLightElement, SVGFEDisplacementMapElement, SVGFEDiffuseLightingElement, SVGFEConvolveMatrixElement, SVGFECompositeElement, SVGFEComponentTransferElement, SVGFEColorMatrixElement, SVGFEBlendElement, SVGEllipseElement, SVGElement, SVGDiscardElement, SVGDescElement, SVGDefsElement, SVGComponentTransferFunctionElement, SVGClipPathElement, SVGCircleElement, SVGAnimationElement, SVGAnimatedTransformList, SVGAnimatedString, SVGAnimatedRect, SVGAnimatedPreserveAspectRatio, SVGAnimatedNumberList, SVGAnimatedNumber, SVGAnimatedLengthList, SVGAnimatedLength, SVGAnimatedInteger, SVGAnimatedEnumeration, SVGAnimatedBoolean, SVGAnimatedAngle, SVGAnimateTransformElement, SVGAnimateMotionElement, SVGAnimateElement, SVGAngle, SVGAElement, Response, ResizeObserverEntry, ResizeObserver, Request, ReportingObserver, ReadableStreamDefaultReader, ReadableStream, Range, RadioNodeList, PromiseRejectionEvent, ProgressEvent, ProcessingInstruction, PopStateEvent, PointerEvent, PerformanceTiming, PerformanceServerTiming, PerformanceResourceTiming, PerformancePaintTiming, PerformanceObserverEntryList, PerformanceObserver, PerformanceNavigationTiming, PerformanceNavigation, PerformanceMeasure, PerformanceMark, PerformanceLongTaskTiming, PerformanceEventTiming, PerformanceEntry, PerformanceElementTiming, Performance, PageTransitionEvent, NodeList, NodeIterator, NodeFilter, Node, Navigator, NamedNodeMap, MutationRecord, MutationObserver, MutationEvent, MouseEvent, MessagePort, MessageEvent, MessageChannel, MediaQueryListEvent, MediaQueryList, MediaList, MediaError, Location, LayoutShift, LargestContentfulPaint, KeyframeEffect, KeyboardEvent, IntersectionObserverEntry, IntersectionObserver, InputEvent, InputDeviceCapabilities, ImageData, ImageBitmap, IdleDeadline, History, Headers, HashChangeEvent, HTMLVideoElement, HTMLUnknownElement, HTMLUListElement, HTMLTrackElement, HTMLTitleElement, HTMLTimeElement, HTMLTextAreaElement, HTMLTemplateElement, HTMLTableSectionElement, HTMLTableRowElement, HTMLTableElement, HTMLTableColElement, HTMLTableCellElement, HTMLTableCaptionElement, HTMLStyleElement, HTMLSpanElement, HTMLSourceElement, HTMLSlotElement, HTMLShadowElement, HTMLSelectElement, HTMLScriptElement, HTMLQuoteElement, HTMLProgressElement, HTMLPreElement, HTMLPictureElement, HTMLParamElement, HTMLParagraphElement, HTMLOutputElement, HTMLOptionsCollection, Option, HTMLOptionElement, HTMLOptGroupElement, HTMLObjectElement, HTMLOListElement, HTMLModElement, HTMLMeterElement, HTMLMetaElement, HTMLMenuElement, HTMLMediaElement, HTMLMarqueeElement, HTMLMapElement, HTMLLinkElement, HTMLLegendElement, HTMLLabelElement, HTMLLIElement, HTMLInputElement, Image, HTMLImageElement, HTMLIFrameElement, HTMLHtmlElement, HTMLHeadingElement, HTMLHeadElement, HTMLHRElement, HTMLFrameSetElement, HTMLFrameElement, HTMLFormElement, HTMLFormControlsCollection, HTMLFontElement, HTMLFieldSetElement, HTMLEmbedElement, HTMLElement, HTMLDocument, HTMLDivElement, HTMLDirectoryElement, HTMLDialogElement, HTMLDetailsElement, HTMLDataListElement, HTMLDataElement, HTMLDListElement, HTMLContentElement, HTMLCollection, HTMLCanvasElement, HTMLButtonElement, HTMLBodyElement, HTMLBaseElement, HTMLBRElement, Audio, HTMLAudioElement, HTMLAreaElement, HTMLAnchorElement, HTMLAllCollection, FormData, FontFaceSetLoadEvent, FontFace, FocusEvent, FileReader, FileList, File, External, EventTarget, Event, ErrorEvent, Element, DragEvent, DocumentType, DocumentFragment, Document, DataTransferItemList, DataTransferItem, DataTransfer, DOMTokenList, DOMStringMap, DOMStringList, DOMRectReadOnly, DOMRectList, DOMRect, DOMQuad, DOMPointReadOnly, DOMPoint, DOMParser, DOMMatrixReadOnly, DOMMatrix, DOMImplementation, DOMException, CustomEvent, CustomElementRegistry, CountQueuingStrategy, CompositionEvent, Comment, ClipboardEvent, CharacterData, CSSVariableReferenceValue, CSSUnparsedValue, CSSUnitValue, CSSTranslate, CSSTransformValue, CSSTransformComponent, CSSSupportsRule, CSSStyleValue, CSSStyleSheet, CSSStyleRule, CSSStyleDeclaration, CSSSkewY, CSSSkewX, CSSSkew, CSSScale, CSSRuleList, CSSRule, CSSRotate, CSSPositionValue, CSSPerspective, CSSPageRule, CSSNumericValue, CSSNumericArray, CSSNamespaceRule, CSSMediaRule, CSSMatrixComponent, CSSMathValue, CSSMathSum, CSSMathProduct, CSSMathNegate, CSSMathMin, CSSMathMax, CSSMathInvert, CSSKeywordValue, CSSKeyframesRule, CSSKeyframeRule, CSSImportRule, CSSImageValue, CSSGroupingRule, CSSFontFaceRule, CSS, CSSConditionRule, CDATASection, ByteLengthQueuingStrategy, Blob, BeforeUnloadEvent, BarProp, Attr, AnimationEvent, AnimationEffect, Animation, AbortSignal, AbortController, WebKitCSSMatrix, WebKitMutationObserver, webkitURL, parent, opener, top, length, frames, closed, location, self, window, document, name, customElements, history, locationbar, menubar, personalbar, scrollbars, statusbar, toolbar, status, frameElement, navigator, origin, external, screen, innerWidth, innerHeight, scrollX, pageXOffset, scrollY, pageYOffset, visualViewport, screenX, screenY, outerWidth, outerHeight, devicePixelRatio, clientInformation, event, offscreenBuffering, screenLeft, screenTop, defaultStatus, defaultstatus, styleMedia, onsearch, onwebkitanimationend, onwebkitanimationiteration, onwebkitanimationstart, onwebkittransitionend, isSecureContext, onabort, onblur, oncancel, oncanplay, oncanplaythrough, onchange, onclick, onclose, oncontextmenu, oncuechange, ondblclick, ondrag, ondragend, ondragenter, ondragleave, ondragover, ondragstart, ondrop, ondurationchange, onemptied, onended, onerror, onfocus, oninput, oninvalid, onkeydown, onkeypress, onkeyup, onload, onloadeddata, onloadedmetadata, onloadstart, onmousedown, onmouseenter, onmouseleave, onmousemove, onmouseout, onmouseover, onmouseup, onmousewheel, onpause, onplay, onplaying, onprogress, onratechange, onreset, onresize, onscroll, onseeked, onseeking, onselect, onstalled, onsubmit, onsuspend, ontimeupdate, ontoggle, onvolumechange, onwaiting, onwheel, onauxclick, ongotpointercapture, onlostpointercapture, onpointerdown, onpointermove, onpointerup, onpointercancel, onpointerover, onpointerout, onpointerenter, onpointerleave, onselectstart, onselectionchange, onanimationend, onanimationiteration, onanimationstart, ontransitionend, onafterprint, onbeforeprint, onbeforeunload, onhashchange, onlanguagechange, onmessage, onmessageerror, onoffline, ononline, onpagehide, onpageshow, onpopstate, onrejectionhandled, onstorage, onunhandledrejection, onunload, performance, stop, open, alert, confirm, prompt, print, queueMicrotask, requestAnimationFrame, cancelAnimationFrame, captureEvents, releaseEvents, requestIdleCallback, cancelIdleCallback, getComputedStyle, matchMedia, moveTo, moveBy, resizeTo, resizeBy, scroll, scrollTo, scrollBy, getSelection, find, webkitRequestAnimationFrame, webkitCancelAnimationFrame, fetch, btoa, atob, setTimeout, clearTimeout, setInterval, clearInterval, createImageBitmap, close, focus, blur, postMessage, onappinstalled, onbeforeinstallprompt, crypto, indexedDB, webkitStorageInfo, sessionStorage, localStorage, SharedArrayBuffer, Atomics, chrome, WebAssembly, ElementInternals, FormDataEvent, SharedWorker, OffscreenCanvas, UserActivation, XSLTProcessor, onformdata, onpointerrawupdate, ClipboardItem, BackgroundFetchManager, BackgroundFetchRecord, BackgroundFetchRegistration, MediaMetadata, MediaSession, MediaSource, Notification, PaymentInstruments, PaymentManager, PaymentRequestUpdateEvent, Permissions, PermissionStatus, EnterPictureInPictureEvent, PictureInPictureWindow, PushManager, PushSubscription, PushSubscriptionOptions, RTCDtlsTransport, RTCSctpTransport, RemotePlayback, webkitSpeechGrammar, webkitSpeechGrammarList, webkitSpeechRecognition, webkitSpeechRecognitionError, webkitSpeechRecognitionEvent, SpeechSynthesisErrorEvent, SpeechSynthesisEvent, SpeechSynthesisUtterance, OffscreenCanvasRenderingContext2D, BluetoothUUID, speechSynthesis, webkitRequestFileSystem, webkitResolveLocalFileSystemURL, openDatabase, applicationCache, Worklet, ApplicationCache, ApplicationCacheErrorEvent, caches, ondevicemotion, ondeviceorientation, ondeviceorientationabsolute, AbsoluteOrientationSensor, Accelerometer, AudioWorklet, Cache, CacheStorage, Clipboard, Credential, CredentialsContainer, DeviceMotionEvent, DeviceMotionEventAcceleration, DeviceMotionEventRotationRate, DeviceOrientationEvent, FederatedCredential, Gyroscope, Keyboard, KeyboardLayoutMap, LinearAccelerationSensor, Lock, LockManager, MediaDeviceInfo, MediaDevices, MediaKeyMessageEvent, MediaKeys, MediaKeySession, MediaKeyStatusMap, MediaKeySystemAccess, MIDIAccess, MIDIConnectionEvent, MIDIInput, MIDIInputMap, MIDIMessageEvent, MIDIOutput, MIDIOutputMap, MIDIPort, NavigationPreloadManager, OrientationSensor, PasswordCredential, RelativeOrientationSensor, RTCIceTransport, Sensor, SensorErrorEvent, ServiceWorker, ServiceWorkerContainer, ServiceWorkerRegistration, StorageManager, PaymentMethodChangeEvent, PaymentAddress, PaymentRequest, PaymentResponse, Presentation, PresentationAvailability, PresentationConnection, PresentationConnectionAvailableEvent, PresentationConnectionCloseEvent, PresentationConnectionList, PresentationReceiver, PresentationRequest, AuthenticatorAssertionResponse, AuthenticatorAttestationResponse, AuthenticatorResponse, PublicKeyCredential, Bluetooth, BluetoothCharacteristicProperties, BluetoothDevice, BluetoothRemoteGATTCharacteristic, BluetoothRemoteGATTDescriptor, BluetoothRemoteGATTServer, BluetoothRemoteGATTService, USB, USBAlternateInterface, USBConfiguration, USBConnectionEvent, USBDevice, USBEndpoint, USBInterface, USBInTransferResult, USBIsochronousInTransferPacket, USBIsochronousInTransferResult, USBIsochronousOutTransferPacket, USBIsochronousOutTransferResult, USBOutTransferResult, XR, XRBoundedReferenceSpace, XRFrame, XRInputSource, XRInputSourceArray, XRInputSourceEvent, XRInputSourcesChangeEvent, XRPose, XRReferenceSpace, XRReferenceSpaceEvent, XRRenderState, XRRigidTransform, XRSession, XRSessionEvent, XRSpace, XRView, XRViewerPose, XRViewport, XRWebGLLayer, google_tag_data, ga, gaplugins, google_tag_manager, dataLayer, setImmediate, clearImmediate, GoogleAnalyticsObject, gaGlobal, gaData) {
+            'use strict';
+            try {
+                const gdemo = new GDemo('[data-demo-container]');
+
+                const code = `
+// Chama a function no clique em "Validar e-mail"
+        jQuery(".btnValidaEmail").click(function(event) {
+            //Remove a classe is-invalid a cada envio
+            jQuery('.form-control').removeClass('is-invalid');
+            event.preventDefault();
+            validarEmail();
+
+        });
+        // Function que valida e exibe o callback
+        function validarEmail() {
+
+            // Pega o e-mail do input
+            var email = jQuery('#email').val();
+            var a = "f9420b3b-8ff4-4b9b-825a-179073fc486b"
+
+            // Variavel com o objeto da requisição AJAX
+            var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "dataType": "jsonp",
+                    "url": "https://bpi.briteverify.com/emails.json?address=" + email + "&apikey=" + a,
+                    "method": "POST",
+                    "headers": {
+                        "cache-control": "no-cache",
+                        "postman-token": "fd412515-853b-39d9-36f9-07a1f418dab1"
+                    }
+                }
+                // Requisição AJAX
+            jQuery.ajax(settings).done(function(response) {
+                var status = response.status;
+
+                // Se inválido
+                if (status == "invalid") {
+                    // exibe info
+                    jQuery('.form-control').addClass('is-invalid');
+                    jQuery('#email').val("");
+
+                }
+
+                // Se válido
+                if (status == "valid") {
+                    // exibe info
+                    jQuery('.form-control').addClass('is-valid');
+                }
+            });
+        };
+`;
+
+                const highlightedCode = Prism.highlight(
+                    code,
+                    Prism.languages.javascript,
+                    'javascript'
+                );
+
+                gdemo
+                    .openApp('editor', {
+                        minHeight: '400px',
+                        windowTitle: 'validaEmail.js'
+                    })
+                    .write(highlightedCode, {
+                        onCompleteDelay: 2000
+                    })
+                    .openApp('terminal', {
+                        minHeight: '400px',
+                        promptString: '$'
+                    })
+                    .command('executar a função validarEmail()', {
+                        onCompleteDelay: 1000
+                    })
+                    .respond(`{
+  address: "talles.nicacio@gmail.com"
+  account: "talles.nicacio"
+  domain: "gmail.com"
+  status: "valid"
+  connected: null
+  disposable: false
+  role_address: false
+  duration: 0.020614784
+}`)
+                    .command('')
+                    .end();
+            } catch (err) {
+                compilationErrorHandler && compilationErrorHandler(err);
+            }
+        }(window.GDemo, window.Prism, window.compilationErrorHandler));
+    </script>
+</body>
+
+</html>

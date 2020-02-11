@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validação de e-mail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/gdemo.min.css">
+
+</head>
+
+<body style="padding: 50px;">
+
+
+    <div class="container " style="margin-top: 100px; ">
+        <h1 class="display-4 ">Valide aqui o seu e-mail</h1>
+        <div class="row ">
+            <div class="col-sm-12 ">
+                <form>
+                    <!-- Formulário de e-mail -->
+                    <div class="INPUT-EMAIL" novalidate>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="E-mail" style="margin-bottom: 10px;" oninput="validarEmail()" required>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <div class="valid-feedback">Seu e-mail foi validado com sucesso. Se liga como eu fiz! </div>
+                            <div class="invalid-feedback">Por favor, digite um email válido.</div>
+                        </div>
+                        <button type="submit " class="btn btn-primary">Validar e-mail</button>
+                    </div>
+                </form>
+                <div class="democode" id="terminal" style="margin-top: 25px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <!--Import jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
+    <!--Valida e-mail-->
+    <script src="valida.js "></script>
+    <script src="js/gdemo.min.js "></script>
+    <!-- Prism -->
+    <script src="js/prismjs.jsx "></script>
+    <!-- Prism Language-Specific -->
+    <script src="js/prism-javascript.js "></script>
+    <!-- Prism Theme-Specific -->
+    <link rel="stylesheet " href="css/prism-tomorrow.css ">
+
+
+</body>
+
+
+</html>
